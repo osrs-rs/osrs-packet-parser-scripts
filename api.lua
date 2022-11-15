@@ -11,6 +11,8 @@ end
 -- Handler for packets to be sent to the server
 function on_send_packet(buf)
     print_packet(buf)
+
+    return buf
 end
 
 -- Handler for packets received from the server
