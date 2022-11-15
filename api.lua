@@ -7,16 +7,17 @@ local function print_packet(buf)
     print(data_str)
 end
 
-
--- Handler for packets to be sent to the server
+-- Handler for game packets to be sent to the server
 function on_send_packet(buf)
     print_packet(buf)
 
     return buf
 end
 
--- Handler for packets received from the server
+-- Handler for game packets received from the server
 function on_recv_packet(buf)
+    print("Recv packet here: "..#buf)
+
     return buf
 end
 
