@@ -17,6 +17,7 @@ end
 
 -- Handler for packets received from the server
 function on_recv_packet(buf)
+    return buf
 end
 
 --[[
