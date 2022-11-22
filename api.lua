@@ -1,5 +1,5 @@
-local function print_packet(buf)
-    local data_str = "Sent packet: ["
+local function print_packet(buf,packet_type)
+    local data_str = packet_type..": ["
     for _,v in ipairs(buf) do
         data_str =  data_str.."0x"..string.format("%X",v)..", "
     end
@@ -9,14 +9,14 @@ end
 
 -- Handler for game packets to be sent to the server
 function on_send_packet(buf)
-    print_packet(buf)
+    print_packet(buf,"Sent packet")
 
     return buf
 end
 
 -- Handler for game packets received from the server
 function on_recv_packet(buf)
-    print("Recv packet here: "..#buf)
+    --print("Recv packet here: "..#buf)
 
     return buf
 end
