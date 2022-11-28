@@ -9,14 +9,14 @@ end
 
 -- Handler for game packets to be sent to the server
 function on_send_packet(buf)
-    print_packet(buf,"Sent packet")
+    --print_packet(buf,"Sent packet")
 
     return buf
 end
 
 -- Handler for game packets received from the server
 function on_recv_packet(buf)
-    --print("Recv packet here: "..#buf)
+    print_packet(buf,"Recv packet")
 
     return buf
 end
