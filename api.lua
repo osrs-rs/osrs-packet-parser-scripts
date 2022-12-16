@@ -22,7 +22,9 @@ function on_recv_packet(buf)
 end
 
 --[[
-    Player = {}
+-- Sample WIP for defining a Player class
+
+Player = {}
 Player.__index = Player
 Player.Skills = {}
 Player.Skills[1] = 456
