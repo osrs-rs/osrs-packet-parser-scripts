@@ -9,7 +9,7 @@ end
 
 -- Handler for game packets to be sent to the server
 function on_send_packet(buf)
-    --print_packet(buf,"Sent packet")
+    print_packet(buf,"Sent packet")
 
     return buf
 end
